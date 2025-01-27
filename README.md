@@ -113,7 +113,7 @@ Implement a program to break the Vigenère cipher when the key length is known. 
 ├── data/
 │   ├── samplePlaintext.txt           # Sample plaintext for testing
 │   ├── sampleCiphertext.txt          # Sample ciphertext with known key
-│   └── ciphertextToDecrypt.txt       # Challenge ciphertext (key length = 5)
+│   └── ciphertextToDecrypt.txt       # Challenge ciphertext (key length = 3)
 │
 └── README.md                         # Detailed lab instructions
 ```
@@ -148,7 +148,7 @@ Three test files are provided in the data directory:
 1. `samplePlaintext.txt`: Contains example plaintext for encryption testing
 2. `sampleCiphertext.txt`: Contains the encrypted version of samplePlaintext.txt (encrypted using key = "key")
 3. `ciphertextToDecrypt.txt`: Challenge ciphertext for the cipher breaking portion
-   - **Important Note**: The key length for this file is **_5_**
+   - **Important Note**: The key length for this file is **_3_**
    - Use this file to test your VigenereCipherBreaker implementation
 
 ## Getting Started
@@ -156,7 +156,7 @@ Three test files are provided in the data directory:
 1. Clone this repository to your local machine
 2. Implement the required methods in VigenereDecryption.java and VigenereCipherBreaker.java
 3. Test your implementation using the provided test cases
-4. Verify your cipher breaking implementation using ciphertextToDecrypt.txt (key length = 5)
+4. Verify your cipher breaking implementation using ciphertextToDecrypt.txt (key length = 3)
 
 ## Testing Your Implementation
 
