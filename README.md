@@ -11,8 +11,6 @@ In this lab, you will work with the Vigenère cipher, a polyalphabetic substitut
 - Familiarity with string manipulation in Java
 - Basic knowledge of cryptography concepts
 
-## Learning Objectives
-
 By completing this lab, you will be able to:
 
 1. Implement the Vigenère cipher decryption algorithm
@@ -100,14 +98,81 @@ Implement a program to break the Vigenère cipher when the key length is known. 
    - Any challenges encountered
    - How you verified your implementation
 
+## Project Structure
+
+```
+.
+├── src/
+│   ├── username/
+│   │    ├── VigenereCipher.java         # Provided encryption implementation
+│   │    ├── VigenereDecryption.java     # Your decryption implementation
+│   │    └── VigenereCipherBreaker.java  # Your cipher breaker implementation
+│   └── test/
+│        └── VigenereDecryptionTest.java     # Test cases for decryption
+│
+├── data/
+│   ├── samplePlaintext.txt           # Sample plaintext for testing
+│   ├── sampleCiphertext.txt          # Sample ciphertext with known key
+│   └── ciphertextToDecrypt.txt       # Challenge ciphertext (key length = 5)
+│
+└── README.md                         # Detailed lab instructions
+```
+
+## Class Descriptions
+
+### 1. VigenereCipher (Provided)
+
+- Main encryption implementation
+- Methods:
+   - `encrypt(String plaintext, String key)`: Encrypts plaintext using the Vigenère cipher
+   - `encryptFile(String inputFile, String outputFile, String key)`: Encrypts content from a file
+
+### 2. VigenereDecryption (To Implement)
+
+- Your implementation of the decryption algorithm
+- Required Methods:
+   - `decrypt(String ciphertext, String key)`: Decrypts ciphertext using the provided key
+   - `decryptFile(String inputFile, String outputFile, String key)`: Decrypts content from a file
+
+### 3. VigenereCipherBreaker (To Implement)
+
+- Implementation for breaking the cipher when key length is known
+- Required Methods:
+   - `breakCipher(String ciphertext, int keyLength)`: Breaks the cipher using frequency analysis
+   - `breakCipherFromFile(String inputFile, String outputFile, int keyLength)`: Processes files for cipher breaking
+
+## Test Files
+
+Three test files are provided in the data directory:
+
+1. `samplePlaintext.txt`: Contains example plaintext for encryption testing
+2. `sampleCiphertext.txt`: Contains the encrypted version of samplePlaintext.txt (encrypted using key = "key")
+3. `ciphertextToDecrypt.txt`: Challenge ciphertext for the cipher breaking portion
+   - **Important Note**: The key length for this file is **_5_**
+   - Use this file to test your VigenereCipherBreaker implementation
+
+## Getting Started
+
+1. Clone this repository to your local machine
+2. Implement the required methods in VigenereDecryption.java and VigenereCipherBreaker.java
+3. Test your implementation using the provided test cases
+4. Verify your cipher breaking implementation using ciphertextToDecrypt.txt (key length = 5)
+
+## Testing Your Implementation
+
+- All test files should be read from/written to the data directory
+- Run the provided JUnit tests to verify your implementation
+- Use the sample files to test both decryption and cipher breaking
+- The final test should be breaking the cipher in ciphertextToDecrypt.txt
+
 ## Grading Criteria
 
 - Part 1 (40%):
-  - Correct decryption implementation (30%)
-  - Code quality and documentation (10%)
+   - Correct decryption implementation (30%)
+   - Code quality and documentation (10%)
 - Part 2 (50%):
-  - Correct cipher breaking implementation (35%)
-  - Code quality and documentation (15%)
+   - Correct cipher breaking implementation (35%)
+   - Code quality and documentation (15%)
 - Write-up (10%)
 
 ## Academic Integrity
@@ -116,13 +181,6 @@ Implement a program to break the Vigenère cipher when the key length is known. 
 - You may discuss general concepts with classmates
 - Code must be your own work
 - Cite any references or resources used
-
-## Resources
-
-- Course textbook: Chapter on Classical Ciphers
-- Lecture notes on Vigenère Cipher
-- Java String documentation
-- Provided starter code and test cases
 
 ## Questions
 
