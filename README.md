@@ -146,7 +146,7 @@ Implement a program to break the Vigenère cipher when the key length is known. 
 Three test files are provided in the data directory:
 
 1. `samplePlaintext.txt`: Contains example plaintext for encryption testing
-2. `sampleCiphertext.txt`: Contains the encrypted version of samplePlaintext.txt (encrypted using key = "key")
+2. `sampleCiphertext.txt`: Contains the encrypted version of samplePlaintext.txt (encrypted using key = "xyz")
 3. `ciphertextToDecrypt.txt`: Challenge ciphertext for the cipher breaking portion
    - **Important Note**: The key length for this file is **_3_**
    - Use this file to test your VigenereCipherBreaker implementation
