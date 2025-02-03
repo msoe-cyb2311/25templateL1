@@ -13,7 +13,7 @@ class VigenereDecryptionTest {
 
     @Test
     void testBasicDecryption() {
-        String ciphertext = "rifvs";  // Encrypted with key="key"
+        String ciphertext = "rijvs";  // Encrypted with key="key"
         String key = "key";
         String expected = "hello";
         assertEquals(expected, decryptor.decrypt(ciphertext, key));
@@ -21,7 +21,7 @@ class VigenereDecryptionTest {
 
     @Test
     void testSimpleMessage() {
-        String ciphertext = "khwor";  // Encrypted with key="test"
+        String ciphertext = "aideh";  // Encrypted with key="test"
         String key = "test";
         String expected = "hello";
         assertEquals(expected, decryptor.decrypt(ciphertext, key));
@@ -48,7 +48,7 @@ class VigenereDecryptionTest {
 
         // Write test content to input file
         try (PrintWriter writer = new PrintWriter(new File(inputFile))) {
-            writer.println("rifvscyvvn");  // "helloworld" encrypted with key="key"
+            writer.println("rijvsuyvjn");  // "helloworld" encrypted with key="key"
         }
 
         try {
